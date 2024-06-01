@@ -32,7 +32,7 @@
                 <h3 class="card-title">Data Program Studi</h3>
   
                <div class="card-tools">
-                <a href="tambahprodi.php" class="btn btn-primary">Tambah</a>
+                <a href="/prodi/create" class="btn btn-primary">Tambah</a>
                 
                </div>
               </div>
@@ -49,14 +49,14 @@
                   <tbody>
                    @foreach ($prodi as $p)
                      
-                   @endforeach
+                   
                     <tr>
-                      <td>{{$p->id_prodi}}</td>
+                      <td>{{$loop->iteration}}</td>
                       <td>{{$p->nama_prodi}}</td>
                       <td></td>
                       <td><a href="" class="btn btn-warning">Edit</a>
                       <a href="" class="btn btn-danger">Hapus</a>
-                    
+                      @endforeach
                     </td>
                     </tr>
                    

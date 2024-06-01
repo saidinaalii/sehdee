@@ -10,8 +10,8 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="dist/img/{{ $data['foto'] }}" class="img-circle elevation-2" style="width:200px; height:200px" alt="User Image">
-        </div>ht
+          <img src="{{asset('dist/img/' . $data['foto'])}}" class="img-circle elevation-2" style="width:200px; height:200px" alt="User Image">
+        </div>
         <div class="info">
           <a href="#" class="d-block">{{ $data['nama'] }}</a>
         </div>
@@ -25,7 +25,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                <li class="nav-item">
-            <a href="index.php" class="nav-link">
+            <a href="{{url('/')}}" class="nav-link">
               <i class="nav-icon far fa-image"></i>
               <p>
                 Dashboard
@@ -35,7 +35,7 @@
           </li>
           
           <li class="nav-item">
-            <a href="mahasiswa" class="nav-link">
+            <a href="{{ url('mahasiswa') }}" class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>
                 Data Mahasiswa
@@ -45,7 +45,7 @@
           </li>
       
           <li class="nav-item">
-            <a href="prodi" class="nav-link">
+            <a href="{{ url('prodi') }}" class="nav-link">
               <i class="nav-icon far fa-image"></i>
               <p>
                 Data Prodi

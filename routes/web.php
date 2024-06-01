@@ -28,5 +28,7 @@ Route::get('prodi', 'App\Http\Controllers\ProdiController@index');
 Route::get('/data', [MahasiswaController::class, 'index']);
 Route::get('/data/{id}', [MahasiswaController::class, 'show']);
 
-Route::get('/data', [ProdiController::class, 'index']);
-Route::get('/data/{id}', [ProdiController::class, 'show']);
+Route::get('/prodi', [ProdiController::class, 'index']);
+Route::get('/prodi/create', [ProdiController::class, 'create']);
+Route::post('/prodi', [ProdiController::class, 'store']);
+

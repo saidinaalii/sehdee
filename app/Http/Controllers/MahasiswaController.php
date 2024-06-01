@@ -13,7 +13,7 @@ class MahasiswaController extends Controller
     {
         $data = ['nama' => 'hitler', 'foto' =>'opp.jpeg'];
         $mahasiswa = DB::table('mahasiswa')->get();
-        return view('mahasiswa', compact ('data', 'mahasiswa')); 
+        return view('mahasiswa.index', compact ('data', 'mahasiswa')); 
     }
 
     public function show($id)
