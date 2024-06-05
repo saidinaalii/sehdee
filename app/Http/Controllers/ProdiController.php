@@ -13,14 +13,14 @@ class ProdiController extends Controller
 {
     public function index()
     {
-        $data = ['nama' => 'hitler', 'foto' =>'opp.jpeg'];
+        $data = ['nama' => 'sehde', 'foto' => 'ss.jpg'];
         $prodi = Prodi::all();
-        return view('prodi.index', compact ('data', 'prodi')); 
+        return view('prodi.index', compact('data', 'prodi'));
     }
 
     public function create()
     {
-        $data = ['nama' => 'hitler', 'foto' =>'opp.jpeg'];
+        $data = ['nama' => 'sehde', 'foto' => 'ss.jpg'];
         return view('prodi.create', compact(['data']));
     }
 
@@ -31,9 +31,7 @@ class ProdiController extends Controller
                 'nama_prodi' => 'required|unique:prodi|max:255'
             ],
         );
-            Prodi::create($validateData);
-            return redirect ('/prodi');
+        Prodi::create($validateData);
+        return redirect('/prodi');
     }
 }
-
-

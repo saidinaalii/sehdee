@@ -6,18 +6,18 @@ use App\Http\Controllers\ProdiController;
 
 
 Route::get('/', function () {
-    $data = ['nama' => 'hitler', 'foto' =>'opp.jpeg'];
-    return view('dashboard', compact ('data')); 
+    $data = ['nama' => 'sehde', 'foto' => 'sehde.jpg'];
+    return view('dashboard', compact('data'));
 });
 
 Route::get('/mahasiswa', function () {
-    $data = ['nama' => 'hitler', 'foto' =>'opp.jpeg'];
-    return view('mahasiswa', compact ('data')); 
+    $data = ['nama' => 'sehde', 'foto' => 'sehde.jpg'];
+    return view('mahasiswa', compact('data'));
 });
 
 Route::get('/prodi', function () {
-    $data = ['nama' => 'hitler', 'foto' =>'opp.jpeg'];
-    return view('prodi', compact ('data')); 
+    $data = ['nama' => 'sehde', 'foto' => 'sehde.jpg'];
+    return view('prodi', compact('data'));
 });
 
 
@@ -31,4 +31,3 @@ Route::get('/data/{id}', [MahasiswaController::class, 'show']);
 Route::get('/prodi', [ProdiController::class, 'index']);
 Route::get('/prodi/create', [ProdiController::class, 'create']);
 Route::post('/prodi', [ProdiController::class, 'store']);
-
